@@ -1,0 +1,32 @@
+{{ define "main" }}
+<main class="container">
+    <section class="feed">
+        <h1 class="page-title">Educational Thoughts</h1>
+        <p style="margin-bottom: 2rem; color: var(--text-light); font-size: 1.1rem;">
+            Reflections on teaching practices, educational philosophy, and the meaningful integration
+            of technology in elementary classrooms. Join the conversation about what matters most in
+            education.
+        </p>
+        <div class="posts-grid">
+            {{ range .Pages }}
+            <article class="post-card">
+                {{ if .Params.image }}
+                <img src="{{ .Params.image }}" alt="{{ .Title }}" class="post-image">
+                {{ end }}
+                <div class="post-content">
+                    <div class="post-header">
+                        <span class="post-category category-thought">Educational Thought</span>
+                        <h3 class="post-title">
+                            <a href="{{ .Permalink }}">{{ .Title }}</a>
+                        </h3>
+                        <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+                    </div>
+                    <p class="post-excerpt">{{ .Summary }}</p>
+                    <a href="{{ .Permalink }}" class="read-more">Read More</a>
+                </div>
+            </article>
+            {{ end }}
+        </div>
+    </section>
+</main>
+{{ end }}

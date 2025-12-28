@@ -1,0 +1,307 @@
+{{ define "main" }}
+<main class="container">
+    <a href="/resources" class="back-link">Back to Resources</a>
+
+    <article class="resource-detail">
+        <div class="resource-detail-header">
+            <span class="resource-topic-badge">{{ .Params.topic }}</span>
+            <h1 class="resource-detail-title">{{ .Title }}</h1>
+
+            <div class="resource-detail-meta">
+                {{ if .Params.printer }}
+                <span class="meta-item">
+                    <strong>Printer:</strong> {{ .Params.printer }}
+                </span>
+                {{ end }}
+                <span class="meta-item">
+                    <strong>Updated:</strong> {{ .Date.Format "January 2, 2006" }}
+                </span>
+            </div>
+        </div>
+
+        {{ if .Params.image }}
+        <img src="{{ .Params.image }}" alt="{{ .Title }}" class="resource-detail-image">
+        {{ end }}
+
+        {{ if .Params.file }}
+        <div class="download-section">
+            <a href="{{ .Params.file }}" class="download-button" download>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                Download 3MF File
+            </a>
+            <p class="download-note">This file is ready to print on a Bambu Lab A1. May require minor adjustments for other printers.</p>
+        </div>
+        {{ end }}
+
+        <div class="resource-detail-content">
+            {{ .Content }}
+        </div>
+
+        <div class="resource-footer">
+            <h3>License & Usage</h3>
+            <p>This model is free to use for educational purposes. You may modify and adapt it for your classroom. If you share modifications, please credit Djangobee Prints and link back to this site.</p>
+
+            <p><strong>Not for commercial use.</strong> Do not sell prints of this model. The goal is to empower educators to make their own solutions.</p>
+        </div>
+    </article>
+</main>
+
+<style>
+.resource-detail {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--bg-white);
+    padding: 3rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-md);
+}
+
+.resource-detail-header {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.resource-topic-badge {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.resource-detail-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.resource-detail-meta {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    color: var(--text-light);
+}
+
+.meta-item {
+    font-size: 0.95rem;
+}
+
+.resource-detail-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.resource-detail-image:hover {
+    transform: scale(1.02);
+}
+
+.download-section {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 2rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.download-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: white;
+    color: var(--primary-color);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.125rem;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.download-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.download-button svg {
+    width: 24px;
+    height: 24px;
+}
+
+.download-note {
+    color: white;
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    opacity: 0.9;
+}
+
+.resource-detail-content {
+    line-height: 1.8;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.resource-detail-content h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.resource-detail-content h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-dark);
+}
+
+.resource-detail-content p {
+    margin-bottom: 1rem;
+}
+
+.resource-detail-content ul, .resource-detail-content ol {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+}
+
+.resource-detail-content li {
+    margin-bottom: 0.5rem;
+}
+
+.resource-detail-content strong {
+    color: var(--text-dark);
+}
+
+.resource-footer {
+    background-color: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border-left: 4px solid var(--primary-color);
+}
+
+.resource-footer h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.resource-footer p {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+    color: var(--text-light);
+}
+
+.resource-footer p:last-child {
+    margin-bottom: 0;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    transition: gap 0.3s;
+}
+
+.back-link:hover {
+    gap: 0.75rem;
+}
+
+.back-link::before {
+    content: '←';
+}
+
+/* Lightbox for resource images */
+.resource-detail-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 2rem auto;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-md);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.resource-detail-content img:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .resource-detail {
+        padding: 1.5rem;
+    }
+
+    .resource-detail-title {
+        font-size: 1.75rem;
+    }
+
+    .resource-detail-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .download-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Create lightbox if it doesn't exist
+    if (!document.querySelector('.lightbox')) {
+        const lightbox = document.createElement('div');
+        lightbox.className = 'lightbox';
+        lightbox.innerHTML = '<span class="lightbox-close">&times;</span><img src="" alt="">';
+        document.body.appendChild(lightbox);
+
+        const lightboxImg = lightbox.querySelector('img');
+        const closeBtn = lightbox.querySelector('.lightbox-close');
+
+        closeBtn.addEventListener('click', function() {
+            lightbox.classList.remove('active');
+        });
+
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                lightbox.classList.remove('active');
+            }
+        });
+    }
+
+    // Add click handlers to resource images
+    const lightbox = document.querySelector('.lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+
+    document.querySelectorAll('.resource-detail-image, .resource-detail-content img').forEach(img => {
+        img.addEventListener('click', function() {
+            lightboxImg.src = this.src;
+            lightboxImg.alt = this.alt;
+            lightbox.classList.add('active');
+        });
+    });
+});
+</script>
+{{ end }}

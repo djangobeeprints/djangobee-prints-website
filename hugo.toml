@@ -1,0 +1,38 @@
+baseURL = 'https://djangobeeprints.com/'
+languageCode = 'en-us'
+title = 'Djangobee Prints'
+
+[params]
+  description = 'Meaningful Technology Integration in Elementary Education'
+  author = 'Djangobee Prints'
+
+[taxonomies]
+  tag = 'tags'
+  category = 'categories'
+
+[menu]
+  [[menu.main]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 1
+  [[menu.main]]
+    name = 'About Me'
+    pageRef = '/about'
+    weight = 2
+  [[menu.main]]
+    name = 'Technology Guides'
+    pageRef = '/tech-guides'
+    weight = 3
+  [[menu.main]]
+    name = 'Educational Thoughts'
+    pageRef = '/thoughts'
+    weight = 4
+  [[menu.main]]
+    name = 'Resources'
+    pageRef = '/resources'
+    weight = 5
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

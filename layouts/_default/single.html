@@ -1,0 +1,206 @@
+{{ define "main" }}
+<main class="container">
+    <a href="/" class="back-link">Back to Home</a>
+
+    <article class="post-full">
+        <div class="post-full-header">
+            <span class="post-category {{ if eq .Params.type "tech" }}category-tech{{ else }}category-thought{{ end }}">
+                {{ if eq .Params.type "tech" }}Tech Guide{{ else }}Educational Thought{{ end }}
+            </span>
+            <h1 class="post-full-title">{{ .Title }}</h1>
+            <div class="post-full-meta">
+                <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+            </div>
+        </div>
+
+        {{ if .Params.image }}
+        <img src="{{ .Params.image }}" alt="{{ .Title }}" class="post-full-image">
+        {{ end }}
+
+        <div class="post-full-content">
+            {{ .Content }}
+        </div>
+    </article>
+</main>
+
+<style>
+.post-full {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--bg-white);
+    padding: 3rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-md);
+}
+
+.post-full-header {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.post-full-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.post-full-meta {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.post-full-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.post-full-content {
+    line-height: 1.8;
+    color: var(--text-light);
+}
+
+.post-full-content h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.post-full-content p {
+    margin-bottom: 1rem;
+}
+
+.post-full-content ul, .post-full-content ol {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+}
+
+.post-full-content li {
+    margin-bottom: 0.5rem;
+}
+
+.post-full-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 2rem auto;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-md);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.post-full-content img:hover {
+    transform: scale(1.02);
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    transition: gap 0.3s;
+}
+
+.back-link:hover {
+    gap: 0.75rem;
+}
+
+.back-link::before {
+    content: '←';
+}
+
+/* Lightbox styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    cursor: default;
+}
+
+.lightbox img:hover {
+    transform: none;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.lightbox-close:hover {
+    color: #ccc;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Create lightbox element
+    const lightbox = document.createElement('div');
+    lightbox.className = 'lightbox';
+    lightbox.innerHTML = '<span class="lightbox-close">&times;</span><img src="" alt="">';
+    document.body.appendChild(lightbox);
+
+    const lightboxImg = lightbox.querySelector('img');
+    const closeBtn = lightbox.querySelector('.lightbox-close');
+
+    // Add click handlers to all content images
+    document.querySelectorAll('.post-full-content img').forEach(img => {
+        img.addEventListener('click', function() {
+            lightboxImg.src = this.src;
+            lightboxImg.alt = this.alt;
+            lightbox.classList.add('active');
+        });
+    });
+
+    // Close lightbox on click
+    closeBtn.addEventListener('click', function() {
+        lightbox.classList.remove('active');
+    });
+
+    lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) {
+            lightbox.classList.remove('active');
+        }
+    });
+
+    // Close on escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+            lightbox.classList.remove('active');
+        }
+    });
+});
+</script>
+{{ end }}

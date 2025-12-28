@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Post - Djangobee Prints">
+    <title>Post - Djangobee Prints</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .post-full {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--bg-white);
+            padding: 3rem;
+            border-radius: 0.5rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .post-full-header {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .post-full-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .post-full-meta {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .post-full-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .post-full-content {
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+
+        .post-full-content h2 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .post-full-content p {
+            margin-bottom: 1rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: gap 0.3s;
+        }
+
+        .back-link:hover {
+            gap: 0.75rem;
+        }
+
+        .back-link::before {
+            content: '←';
+        }
+
+        .coming-soon {
+            text-align: center;
+            padding: 3rem;
+            background-color: var(--bg-light);
+            border-radius: 0.5rem;
+            margin: 2rem 0;
+        }
+
+        .coming-soon h2 {
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .coming-soon p {
+            color: var(--text-light);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="/">Djangobee Prints</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="tech-guides.html">Technology Guides</a></li>
+                <li><a href="thoughts.html">Educational Thoughts</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <a href="/" class="back-link">Back to Home</a>
+
+        <article class="post-full">
+            <div class="coming-soon">
+                <h2>Full Post Coming Soon</h2>
+                <p>We're working on bringing you detailed, high-quality content.</p>
+                <p>Check back soon for the complete article!</p>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Djangobee Prints. All rights reserved.</p>
+            <p>Empowering elementary educators with technology</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

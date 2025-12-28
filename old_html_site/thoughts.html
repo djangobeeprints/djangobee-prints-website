@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Educational philosophy and reflections on technology in elementary education">
+    <title>Educational Thoughts - Djangobee Prints</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="/">Djangobee Prints</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="tech-guides.html">Technology Guides</a></li>
+                <li><a href="thoughts.html" class="active">Educational Thoughts</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="feed">
+            <h1 class="page-title">Educational Thoughts</h1>
+            <p style="margin-bottom: 2rem; color: var(--text-light); font-size: 1.1rem;">
+                Reflections on teaching practices, educational philosophy, and the meaningful integration
+                of technology in elementary classrooms. Join the conversation about what matters most in
+                education.
+            </p>
+            <div id="posts-container" class="posts-grid">
+                <!-- Educational thought posts will be dynamically loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Djangobee Prints. All rights reserved.</p>
+            <p>Empowering elementary educators with technology</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
