@@ -1,10 +1,21 @@
 baseURL = 'https://djangobeeprints.com/'
 languageCode = 'en-us'
 title = 'Djangobee Prints'
+enableRobotsTXT = true
+enableGitInfo = false
 
 [params]
-  description = 'Meaningful Technology Integration in Elementary Education'
+  description = 'Technology Integration in Elementary Music Education'
   author = 'Djangobee Prints'
+
+  # Social media (add your handles)
+  [params.social]
+    twitter = ''  # Add your Twitter/X URL if you have one
+
+[sitemap]
+  changefreq = 'weekly'
+  filename = 'sitemap.xml'
+  priority = 0.5
 
 [taxonomies]
   tag = 'tags'

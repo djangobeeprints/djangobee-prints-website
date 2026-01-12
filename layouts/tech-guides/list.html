@@ -3,9 +3,8 @@
     <section class="feed">
         <h1 class="page-title">Technology Guides</h1>
         <p style="margin-bottom: 2rem; color: var(--text-light); font-size: 1.1rem;">
-            Practical, classroom-tested guides for integrating technology into elementary education.
-            From hardware setup to digital literacy activities, find step-by-step resources to enhance
-            your teaching.
+            Guides on using maker technology, with a focus on education. All guides and articles are designed for
+            beginners.
         </p>
         <div class="posts-grid">
             {{ range .Pages }}
@@ -15,13 +14,19 @@
                 {{ end }}
                 <div class="post-content">
                     <div class="post-header">
+                        {{ if .Params.tag }}
+                        <span class="post-category"
+                            style="background-color: {{ .Params.tag_color }}1a; color: {{ .Params.tag_color }};">{{
+                            .Params.tag }}</span>
+                        {{ else }}
                         <span class="post-category category-tech">Tech Guide</span>
+                        {{ end }}
                         <h3 class="post-title">
                             <a href="{{ .Permalink }}">{{ .Title }}</a>
                         </h3>
                         <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
                     </div>
-                    <p class="post-excerpt">{{ .Summary }}</p>
+                    <p class="post-excerpt">{{ .Params.description }}</p>
                     <a href="{{ .Permalink }}" class="read-more">Read More</a>
                 </div>
             </article>

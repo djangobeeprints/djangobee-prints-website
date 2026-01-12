@@ -10,15 +10,19 @@
                 {{ end }}
                 <div class="post-content">
                     <div class="post-header">
+                        {{ if .Params.tag }}
+                        <span class="post-category" style="background-color: {{ .Params.tag_color }}1a; color: {{ .Params.tag_color }};">{{ .Params.tag }}</span>
+                        {{ else }}
                         <span class="post-category {{ if eq .Params.type "tech" }}category-tech{{ else }}category-thought{{ end }}">
                             {{ if eq .Params.type "tech" }}Tech Guide{{ else }}Educational Thought{{ end }}
                         </span>
+                        {{ end }}
                         <h3 class="post-title">
                             <a href="{{ .Permalink }}">{{ .Title }}</a>
                         </h3>
                         <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
                     </div>
-                    <p class="post-excerpt">{{ .Summary }}</p>
+                    <p class="post-excerpt">{{ .Params.description }}</p>
                     <a href="{{ .Permalink }}" class="read-more">Read More</a>
                 </div>
             </article>

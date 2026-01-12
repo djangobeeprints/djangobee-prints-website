@@ -5,43 +5,37 @@ topic: "3D Printer Models for Music Education"
 printer: "Bambu Lab A1"
 file: "/downloads/Xylophone Mount.3mf"
 image: "/assets/xylophone_mount_1.jpg"
+description: "An adjustable bracket system with magnetic arms that allows you to label xylophone bars with solfege or note names."
+tag: "Resource"
+tag_color: "#2563eb"
 ---
 
 An adjustable bracket system with magnetic arms that allows you to label xylophone bars with solfege or note names. This mounting system creates a "personal wall that teaches" right at the instrument.
 
 ## Features
 
-- Adjustable magnetic arms for different xylophone sizes
-- Holds colorful solfege or note name labels
-- Compatible with standard classroom xylophones
+- Movable magnetic arms for different xylophone sizes
+- Holds solfege or note name tiles
+- Works with many xylophones
 - Can be used for pentatonic scale highlighting or full diatonic labeling
 - Includes magnetic clipboard attachment for sheet music
 
-## Use Cases
-
-- **Pentatonic improvisation** - Label Do, Mi, So, La for easy improvisation activities
-- **Reading music** - Attach magnetic clipboard to hold sheet music at eye level
-- **Note name learning** - Label bars with letter names for beginners
-- **Differentiation** - Provide visual support for students who need it
 
 ## Printing Information
 
 - **Printer**: Designed for Bambu Lab A1
-- **Filament**: PLA recommended
-- **Print time**: Varies by component (approximately 2-4 hours total)
-- **Supports**: Minimal supports required
-- **Infill**: 20% recommended
+- **Filament**: PLA
+- **Large Magnet inserts**: 30x10x3mm magnets
+- **Small Magnet inserts**: 20x5x2mm magnets
 
 ## Assembly
 
 You will need:
+- Metal adhesive tape
 - Small neodymium magnets (for the arms and clipboard)
-- The printed bracket and arm components
-- Labels (can be printed or handwritten on cardstock)
+- Labels (can be printed
 
 ## Tips
+Check the polarity of your magnet you inserting them.  Make sure that whichever way you choose for your first print, that all subsequent prints insert magnets in the same magnetic orientation.
 
-- Use strong magnets for better label attachment
-- Laminate labels for durability
-- Print multiple sets in different colors for organization
-- Consider printing extra arms for additional labeling positions
+The magnets in the arms are oriented vertically (you insert them and push them down).  However, this step has failed on printers using a hardened steel nozzle.  When inserting magnets, the  build surface is usually why the magnets won't leave the print.  However, with the orientation in combination with the addition of the hardened steel nozzle, I have observed print failures directly after inserting the magnet pauses.  use the standard stainless steel nozzle included with your printer to avoid this problem.  This problem occured on my A1 mini.

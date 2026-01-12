@@ -3,6 +3,9 @@ title: "Enabling Universal Design of Learning in Music Education with 3D Printin
 date: 2025-12-28
 type: "thought"
 image: "/assets/xylophone_mount_1.jpg"
+description: "The biggest challenge facing educators is how to best deal with marginal students. 3D printing offers unique opportunities to create accessible learning tools and personal walls that teach."
+tag: "Educational Thought"
+tag_color: "#dc2626"
 ---
 
 I feel that the biggest challenge facing educators is how to best deal with marginal students. My marginal students - the ones who have attention issues or behavior issues or even just simple attitude issues - perfomed better when they have more support to access the learning. Not all supports are equal, but I noticed I was able to get more consistent results when they had access to "walls that teach."
