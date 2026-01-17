@@ -2,7 +2,7 @@
 title: "Embedding Magnets into Your 3D Prints"
 date: 2026-01-11
 type: "tech"
-image: "/assets/Boomwhacker_mount_1.png"
+image: "/assets/boomwhacker_mount_14.png"
 description: "Learn how to design magnet pockets into your 3D prints using negative spaces, layer height calculations, and print pauses for classroom storage solutions."
 tag: "Tech Guide"
 tag_color: "#059669"
@@ -14,7 +14,7 @@ The key to making this work? Embedding magnets directly into the 3D printed moun
 
 **Bonus:** With a little tape on the inside of each mount, these holders can secure the boomwhackers firmly enough to turn them into mounted xylophones.
 
-![Boomwhacker mount 3D model in Tinkercad](/assets/Boomwhacker_mount_1.png)
+![Boomwhacker mount 3D model in Tinkercad](/assets/boomwhacker_mount_1.png)
 
 ## Materials You'll Need
 
@@ -143,7 +143,7 @@ When the printer pauses:
 2. **CRITICAL: Make sure all magnets have the same polarity** - test with another magnet before inserting to ensure they all attract on the same side.  Although functionally it will work, I always make sure insert my magnets the same way, in case if I have an idea later to attach something to that magnet. Most of my prints on this website rely on having the correct polarity.
 4. Resume the print
 
-*(Note: Photo of magnet insertion will be added)*
+![Inserting Magnets](/assets/boomwhacker_mount_13.png)
 
 The printer will continue and lay down the 18th layer over the magnets, sealing them inside the print.
 

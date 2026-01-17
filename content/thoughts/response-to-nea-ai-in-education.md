@@ -1,6 +1,7 @@
 ---
 title: "A Response to 'How AI is Changing the Way You Teach'"
 date: 2026-01-16
+type: "thought"
 description: "A critique of the NEA's approach to AI in education, arguing that expertise must precede effective AI use."
 tags: ["education", "artificial intelligence", "teaching", "critical thinking"]
 image: "/assets/brain_communicating_with_computer.png"
