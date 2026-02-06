@@ -429,3 +429,8 @@ body {
         font-size: 1.75rem;
     }
 }
+
+/* Hide spicy takes (but keep in HTML for inspection) */
+.spicy {
+    display: none;
+}

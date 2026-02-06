@@ -25,7 +25,7 @@ Technology has incredible power when used thoughtfully. My goal is to share the 
 
 Have questions, suggestions, or want to share your own experiences with technology in elementary education? I'd love to hear from you!
 
-**Email:** contact@djangobeeprints.com
+**Email:** djangobeeprints@gmail.com
 **Follow:** Share your classroom tech successes with us
 
 ## Support My Work

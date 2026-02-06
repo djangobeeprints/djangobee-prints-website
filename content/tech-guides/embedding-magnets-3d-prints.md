@@ -8,9 +8,9 @@ tag: "Tech Guide"
 tag_color: "#059669"
 ---
 
-I have a recurring problem in my music classroom: I need student-accessible storage that also displays my boomwhackers. There are commercial products for this, but I don't have money to waste when I can use my 3D printer to stretch my budget instead. Plus, I wanted to create a custom solution using an old metal cabinet I already have in the room.
+I have a recurring problem in my music classroom: I need student-accessible storage for instrumens, especially my boomwhackers. There are commercial products for this, but I don't have money to waste when I can use my 3D printer to stretch my budget instead. Plus, I wanted to create a custom solution using an old metal cabinet I already have in the room.
 
-The key to making this work? Embedding magnets directly into the 3D printed mount. Here's how I designed and printed magnetic boomwhacker holders using negative spaces and strategic print pauses.
+My design incorperates embedding magnets directly into the 3D printed mount. Here's how I designed and printed magnetic boomwhacker holders using negative spaces and print pauses.
 
 **Bonus:** With a little tape on the inside of each mount, these holders can secure the boomwhackers firmly enough to turn them into mounted xylophones.
 
@@ -18,11 +18,7 @@ The key to making this work? Embedding magnets directly into the 3D printed moun
 
 ## Materials You'll Need
 
-- 3D printer 
 - Rectangular neodymium magnets - I used 60x10x3mm magnets (~$0.50 each on Amazon)
-- Calipers for measuring
-- Tinkercad (or your preferred CAD software)
-- Slicer software with preview and layer control
 
 **Cost per mount:** Approximately $4 total ($2 for magnets + $2 for 117g of PLA)
 
@@ -30,11 +26,11 @@ The key to making this work? Embedding magnets directly into the 3D printed moun
 
 I started by pulling out my calipers and measuring the general dimensions I would need for the boomwhacker holders. Using Tinkercad, I created a fairly simple base model with curved holders for the boomwhackers.
 
-The initial design focused on functionality - getting the right spacing and curve for the boomwhackers to rest securely.
+The initial design focused on functionality - getting the right spacing and curve for the boomwhackers to rest securely. After a few test prints I was ready to move to the slicer, where we will embed magnets into the print.
 
 ## Step 2: Create the Negative Space for Magnets
 
-This is where the magic happens. To embed magnets into your print, you need to create a **negative space** (a hole) that the magnet will fit into. You can do this in TinkerCAD, and there are times where this is the best way to do it, but doing it in Bambu Slicer is generally the best approach. This way you can experiment with the positioning and resize the object without needing to remake the negative space.
+This is where the magic happens. To embed magnets into your print, you need to create a **negative space** (a hole) that the magnet will fit into. You can do this in TinkerCAD, and there are times where this is the best way to do it, but doing it in slicer (Bambu Studio for me) is generally the best approach. This way you can experiment with the positioning and resize the object without needing to remake the negative space.
 
 ![Adding a negative cube in Bambu Studio](/assets/boomwhacker_mount_2.png)
 
@@ -120,16 +116,16 @@ Rather than manually placing each magnet pocket, there's a much faster way using
 
 ![Duplicating and positioning multiple negative spaces](/assets/boomwhacker_mount_7.png)
 
-1. Select your negative space (you may need to use the object viewer and click the object)
-2. Ctrl+C and Ctrl+V three times to create four total negative spaces
-3. Adjust the position of each new negative space by clicking the negative space object in the object viewer, then move using Object Coordinates
+1. Select your already lined up negative space (you may need to use the object viewer and click the object)
+2. Ctrl+C and Ctrl+V three times to create four total negative spaces, all stacked at the same x, y and z coordinate
+3. Adjust the position of each new negative space by clicking the negative space object in the object viewer, then move using **Object Coordinates**
 4. Since coordinates are relative to the midpoint, simply change the signs of X and Y coordinates to get all combinations:
    - (++): positive X, positive Y
    - (+-): positive X, negative Y
    - (--): negative X, negative Y
    - (-+): negative X, positive Y
 
-This creates perfectly spaced negative spaces without manual measurement.
+This creates perfectly spaced negative spaces without manual movement.
 
 ![Print paused, ready for magnet insertion](/assets/boomwhacker_mount_12.png)
 
