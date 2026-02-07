@@ -20,6 +20,9 @@ I learned programming skills back in 2018 because I was dissatisfied with educat
 ## The Article
 
 I won't bury the lead, you can read the NEA's attempt at exploring AI in education [here](https://www.nea.org/nea-today/all-news-articles/how-ai-changing-way-you-teach). There are a few positives, but I think there is a general trend we might observe as we go through the different age brackets of students. Simply put, the more **student facing** AI applications we permit, the less authentic their praxis will be. The less emphasis we put on reality, the more disconnected education will be from reality - and right now, public school education is quite disconnected.
+
+peppers!
+
 {{< spicy >}} pepper{{< /spicy >}}
 
 ## The Elementary Example: Right Approach, Wrong Emphasis
