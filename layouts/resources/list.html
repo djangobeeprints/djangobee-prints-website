@@ -24,7 +24,9 @@
                 {{ range where $.Pages "Params.topic" $currentTopic }}
                 <article class="resource-card">
                     {{ if .Params.image }}
-                    <img src="{{ .Params.image }}" alt="{{ .Title }}" class="resource-image">
+                    <a href="{{ .Permalink }}">
+                        <img src="{{ .Params.image }}" alt="{{ .Title }}" class="resource-image">
+                    </a>
                     {{ end }}
 
                     <div class="resource-content">
@@ -136,6 +138,17 @@
     width: 100%;
     height: 150px;
     object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.resource-card a:has(.resource-image) {
+    display: block;
+}
+
+.resource-card a:has(.resource-image):hover .resource-image {
+    transform: scale(1.05);
+    opacity: 0.9;
 }
 
 .resource-content {

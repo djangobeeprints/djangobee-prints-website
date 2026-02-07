@@ -10,7 +10,9 @@
             {{ range .Pages }}
             <article class="post-card">
                 {{ if .Params.image }}
-                <img src="{{ .Params.image }}" alt="{{ .Title }}" class="post-image">
+                <a href="{{ .Permalink }}">
+                    <img src="{{ .Params.image }}" alt="{{ .Title }}" class="post-image">
+                </a>
                 {{ end }}
                 <div class="post-content">
                     <div class="post-header">

@@ -218,6 +218,17 @@ body {
     height: 150px;
     object-fit: cover;
     background-color: var(--bg-light);
+    cursor: pointer;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.post-card a:has(.post-image) {
+    display: block;
+}
+
+.post-card a:has(.post-image):hover .post-image {
+    transform: scale(1.05);
+    opacity: 0.9;
 }
 
 .post-content {
