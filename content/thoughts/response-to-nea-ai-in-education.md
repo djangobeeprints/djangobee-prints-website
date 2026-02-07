@@ -21,10 +21,6 @@ I learned programming skills back in 2018 because I was dissatisfied with educat
 
 I won't bury the lead, you can read the NEA's attempt at exploring AI in education [here](https://www.nea.org/nea-today/all-news-articles/how-ai-changing-way-you-teach). There are a few positives, but I think there is a general trend we might observe as we go through the different age brackets of students. Simply put, the more **student facing** AI applications we permit, the less authentic their praxis will be. The less emphasis we put on reality, the more disconnected education will be from reality - and right now, public school education is quite disconnected.
 
-peppers!
-
-{{< spicy >}} pepper{{< /spicy >}}
-
 ## The Elementary Example: Right Approach, Wrong Emphasis
 
 Brenda Álvarez starts in elementary school, by examining an elementary teacher's use of AI. The first note is that there is a strict boundary—no unsupervised student access to AI. This is a good start, but the article's treatment about actual applications for elementary school is frustratingly superficial. Despite noting that "private data shouldn't be given to AI", it is clear that the teacher is giving data to AI, which should trigger a review of FERPA or student data privacy concerns. How can you get personalized assessments without using names? You can, but it's not something that I would expect a teacher to think about before they start using AI. The thing is, AI is best at using data like this. However, a responsible AI practitioner needs to sanitize the data before giving it to AI. This omission exemplifies the article's broader problem: enthusiasm for AI adoption without rigorous consideration of pedagogical and legal safeguards. Additionally, it lacks any specific tool or product being mentioned, which means that most likely, this teacher is using the chat window. The chat window for AI has its purposes, but in terms of efficiency in data intensive projects, it's like trying to shovel a driveway with a spoon.
