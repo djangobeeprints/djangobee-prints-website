@@ -2,18 +2,18 @@
 title: "Vibe Coding 101: Building Classroom Apps with AI"
 date: 2026-02-17
 type: "tech"
-description: "No programming experience required. Learn how to use AI tools like Claude and ChatGPT to build custom interactive applications for your Promethean board and classroom."
+description: "No programming experience required. Explore how to use AI tools like Claude and ChatGPT to build custom interactive applications for your Promethean board and classroom."
 tag: "Tech Guide"
 tag_color: "#059669"
 ---
 
-I have been a music teacher for over a decade, and for most of that time I have been constrained by what commercial software happens to exist for music educators. If a tool did not exist, I simply did not have it. That changed when I discovered vibe coding.  This is the practice of using AI to build custom applications by describing what you want in plain English. Since then, I have built over 25 classroom tools, including a student name spinner, rhythm flashcard apps, and even this very website.
+I have been a music teacher for over a decade, and for most of that time I have been constrained by what commercial software happens to exist for music educators. If a tool did not exist, I simply did not have it. Although I could program, finding time to actually create the tools I need just wasn't there. That changed when I discovered vibe coding.  This is the practice of using AI to build custom applications by describing what you want in plain English. Since then, I have built over 25 classroom tools, including a student name spinner, rhythm flashcard apps, and even this very website.
 
 This guide will walk you through exactly how to get started, from your very first prompt to building a fully functional, customized classroom tool.
 
 ## Why This Matters for Teachers
 
-If you are familiar with the [TPACK framework](https://www.powerschool.com/blog/the-tpack-framework-explained-with-classroom-examples/) (Technological Pedagogical Content Knowledge), you know that the overlap between technology and content knowledge has always been the hardest zone for teachers to reach. Why? Because we are constrained by whatever software companies happen to build for our subject area. Music, art, physical education, and other subjects have historically had very thin software support compared to core academic classes.
+If you are familiar with the [TPACK framework](https://www.powerschool.com/blog/the-tpack-framework-explained-with-classroom-examples/) (Technological Pedagogical Content Knowledge), you know that the overlap between technology and content knowledge has always been a struggle. Why? Because we are constrained by whatever software companies happen to build for our subject area. Music, art, physical education, and other subjects have historically had very thin software support compared to core academic classes.
 
 Vibe coding breaks that constraint. As a teacher, you are already a content expert. You know exactly what tools you need and how they should behave. AI handles the programming. You just need to know how to ask for it.
 
@@ -26,6 +26,7 @@ The barrier to entry is lower than you might expect:
 - **An AI assistant** — [ChatGPT](https://chat.openai.com), [Claude](https://claude.ai), or [Google Gemini](https://gemini.google.com) all work. The free versions are sufficient to experiment with and build numerous applications.
 - **A text editor or web browser** — Most vibe-coded projects are HTML web apps that run directly in any browser, including the browser built into your Promethean board.
 - **No programming experience required**, though it is helpful!
+- **Advanced hardware not required** most AI computing is done in cloud servers. You can run things locally, at a cost.
 
 If you already have a subscription to any AI service, you already have everything you need.
 
@@ -35,9 +36,9 @@ If you already have a subscription to any AI service, you already have everythin
 
 Before you start building, it helps to know a few terms:
 
-**Model** — The specific AI being used. Different models have different strengths. For most classroom applications, Claude Sonnet or GPT-4o are reliable choices.
+**Model** — The specific AI being used. Different models have different strengths. For most applications, Claude Sonnet or GPT-4o are reliable choices.
 
-**Context** — The information the AI "remembers" during your conversation. This is important: the AI only knows what is in the current conversation. If you start a new chat, it forgets everything. Context is short term memory.
+**Context** — The information the AI "remembers" during your conversation. This is important: the AI only knows what is in the current conversation. If you start a new chat, it forgets everything. Context is short term memory. You can keep certain documents to act as long-term memory, but the tradeoff is the more long-term memory you put into each interaction, the less room you have for useful work.
 
 **Tokens** — The fundamental unit the AI uses for input and output. One token is roughly three to four characters. Free tiers have limited token allowances, which is why free versions typically allow around six exchanges before hitting a limit.
 
@@ -114,24 +115,22 @@ One of the most powerful vibe coding techniques is to use an AI image generator 
 
 The workflow looks like this:
 
-1. Use an AI image generator (Google's ImageFX, Adobe Firefly, etc.) to generate a mock screenshot of what you want your app to look like
+1. Use an AI image generator (nano-banana is great!) to generate a mock screenshot of what you want your app to look like
 2. Provide that image to your coding AI (Claude, ChatGPT) along with a prompt like: *"Build this application based on the interface shown in this image"*
 
-This is especially effective when you have specific visual elements — musical notation symbols, subject-specific icons, or a particular color scheme. By feeding the AI a visual reference, you skip a lot of back-and-forth on layout and styling.
+This is especially effective when you have specific visual elements musical notation symbols, subject-specific icons, or a particular color scheme. By feeding the AI a visual reference, you skip a lot of back-and-forth on layout and styling.
 
 As a vibe coder, you are acting as a **project manager**, coordinating different AI tools to produce a final product.
 
 ![Gemini-generated interface concept next to the functional Claude-built rhythm application](/assets/vibe_coding_gemini_vs_claude.jpg)
 
-### Tip 3: Avoid One-Shotting
+### Tip 3: Avoid One-Shotting at first
 
-One-shotting is when you try to put every single requirement into a single massive prompt and get the AI to build the entire application at once. This is tempting but usually counterproductive.
+One-shotting is when you try to put every single requirement into a single prompt and get the AI to build the entire application at once. This is accomplished by first completely planning out the application, and then having your AI follow the insructions loaded in the context.
 
-The problem is that a single enormous prompt produces a large, complex codebase in one step. If something does not work — and something usually does not — it is very hard to identify what went wrong. You also burn through your token allowance quickly.
+We can borrow the idea of planning out an application before using it, but instead, build incrementally.
 
-Instead, build incrementally as described above.
-
-**The exception:** For very simple, well-defined applications, a detailed single prompt can work well. As you gain experience, you will develop a feel for when to one-shot and when to iterate.
+For very simple, well-defined applications, a detailed single prompt can work well. As you gain experience, you will develop a feel for when to one-shot and when to iterate.
 
 ![One-shotting as a trap versus using PRD.md structure as the technique](/assets/vibe_coding_one_shotting.jpg)
 

@@ -20,6 +20,8 @@
         <div class="post-full-content">
             {{ .Content }}
         </div>
+
+        {{ partial "share.html" . }}
     </article>
 </main>
 
@@ -166,21 +168,31 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Create lightbox element
+    // Create lightbox element using safer DOM methods
     const lightbox = document.createElement('div');
     lightbox.className = 'lightbox';
-    lightbox.innerHTML = '<span class="lightbox-close">&times;</span><img src="" alt="">';
-    document.body.appendChild(lightbox);
 
-    const lightboxImg = lightbox.querySelector('img');
-    const closeBtn = lightbox.querySelector('.lightbox-close');
+    const closeBtn = document.createElement('span');
+    closeBtn.className = 'lightbox-close';
+    closeBtn.textContent = '×';
+
+    const lightboxImg = document.createElement('img');
+    lightboxImg.src = '';
+    lightboxImg.alt = '';
+
+    lightbox.appendChild(closeBtn);
+    lightbox.appendChild(lightboxImg);
+    document.body.appendChild(lightbox);
 
     // Add click handlers to all content images
     document.querySelectorAll('.post-full-content img').forEach(img => {
         img.addEventListener('click', function() {
-            lightboxImg.src = this.src;
-            lightboxImg.alt = this.alt;
-            lightbox.classList.add('active');
+            // Validate image source is from same origin
+            if (this.src && (this.src.startsWith(window.location.origin) || this.src.startsWith('/'))) {
+                lightboxImg.src = this.src;
+                lightboxImg.alt = this.alt;
+                lightbox.classList.add('active');
+            }
         });
     });
 

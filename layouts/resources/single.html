@@ -41,6 +41,8 @@
             {{ .Content }}
         </div>
 
+        {{ partial "share.html" . }}
+
         <div class="resource-footer">
             <h3>License & Usage</h3>
             <p>This model is free to use for educational purposes. You may modify and adapt it for your classroom. If you share modifications, please credit Djangobee Prints and link back to this site.</p>
@@ -264,15 +266,24 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Create lightbox if it doesn't exist
-    if (!document.querySelector('.lightbox')) {
-        const lightbox = document.createElement('div');
-        lightbox.className = 'lightbox';
-        lightbox.innerHTML = '<span class="lightbox-close">&times;</span><img src="" alt="">';
-        document.body.appendChild(lightbox);
+    // Create lightbox if it doesn't exist using safer DOM methods
+    let lightbox = document.querySelector('.lightbox');
 
-        const lightboxImg = lightbox.querySelector('img');
-        const closeBtn = lightbox.querySelector('.lightbox-close');
+    if (!lightbox) {
+        lightbox = document.createElement('div');
+        lightbox.className = 'lightbox';
+
+        const closeBtn = document.createElement('span');
+        closeBtn.className = 'lightbox-close';
+        closeBtn.textContent = '×';
+
+        const lightboxImg = document.createElement('img');
+        lightboxImg.src = '';
+        lightboxImg.alt = '';
+
+        lightbox.appendChild(closeBtn);
+        lightbox.appendChild(lightboxImg);
+        document.body.appendChild(lightbox);
 
         closeBtn.addEventListener('click', function() {
             lightbox.classList.remove('active');
@@ -292,14 +303,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Add click handlers to resource images
-    const lightbox = document.querySelector('.lightbox');
     const lightboxImg = lightbox.querySelector('img');
 
     document.querySelectorAll('.resource-detail-image, .resource-detail-content img').forEach(img => {
         img.addEventListener('click', function() {
-            lightboxImg.src = this.src;
-            lightboxImg.alt = this.alt;
-            lightbox.classList.add('active');
+            // Validate image source is from same origin
+            if (this.src && (this.src.startsWith(window.location.origin) || this.src.startsWith('/'))) {
+                lightboxImg.src = this.src;
+                lightboxImg.alt = this.alt;
+                lightbox.classList.add('active');
+            }
         });
     });
 });

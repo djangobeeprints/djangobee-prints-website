@@ -13,7 +13,11 @@
                 <div class="post-content">
                     <div class="post-header">
                         {{ if .Params.tag }}
-                        <span class="post-category" style="background-color: {{ .Params.tag_color }}1a; color: {{ .Params.tag_color }};">{{ .Params.tag }}</span>
+                        {{- $tagColor := .Params.tag_color | default "#000000" -}}
+                        {{- if not (findRE "^#[0-9a-fA-F]{6}$" $tagColor) -}}
+                            {{- $tagColor = "#000000" -}}
+                        {{- end -}}
+                        <span class="post-category" style="background-color: {{ $tagColor }}1a; color: {{ $tagColor }};">{{ .Params.tag }}</span>
                         {{ else }}
                         <span class="post-category {{ if eq .Params.type "tech" }}category-tech{{ else }}category-thought{{ end }}">
                             {{ if eq .Params.type "tech" }}Tech Guide{{ else }}Educational Thought{{ end }}
