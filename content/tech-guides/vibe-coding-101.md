@@ -9,8 +9,9 @@ tag_color: "#059669"
 
 I have been a music teacher for over a decade, and for most of that time I have been constrained by what commercial software happens to exist for music educators. If a tool did not exist, I simply did not have it. Although I could program, finding time to actually create the tools I need just wasn't there. That changed when I discovered vibe coding.  This is the practice of using AI to build custom applications by describing what you want in plain English. Since then, I have built over 25 classroom tools, including a student name spinner, rhythm flashcard apps, and even this very website.
 
+This guide was adapted from a presentation I prepared for my colleagues in which I had a hands on tutorial using Claude. A video explaining the process will be coming soon.
 
-This guide will walk you through exactly how to get started, from your very first prompt to building a fully functional, customized classroom tool. You do not need coding experience, although it is always helpful.
+This guide will walk you through exactly how to get started, from your very first prompt to building a fully functional, customized classroom tool. You do not need coding experience, although it is always helpful.  This is only the very tip of the iceberg.
 
 ## Why This Matters for Teachers
 
@@ -41,16 +42,27 @@ Before you start building, it helps to know a few terms:
 
 **Context** — The information the AI "remembers" during your conversation. This is important: the AI only knows what is in the current conversation. If you start a new chat, it forgets everything. Context is short term memory. You can keep certain documents to act as long-term memory, but the tradeoff is the more long-term memory you put into each interaction, the less room you have for useful work.
 
-**Tokens** — The fundamental unit the AI uses for input and output. One token is roughly three to four characters. Free tiers have limited token allowances, which is why free versions typically allow around six exchanges before hitting a limit.
+**Tokens** — The fundamental unit the AI uses for input and output. One token is roughly three to four characters. Free tiers have limited token allowances, which is why free versions typically allow around six exchanges (in my experience) before hitting a limit.  Big requests will use your messages faster.
 
-**Usage** — How much of your token allowance you have consumed. Keep an eye on this if you are on a free plan.
+**Usage** — How much of your token allowance you have consumed. Keep an eye on this if you are on a free plan - or paid too! Hitting a rate limit often puts a brake on your flow state.
 
 
 ## Your First Build: A Student Name Spinner
 
-Let's walk through building a real, usable classroom tool from scratch. The example here is a student name spinner — something every teacher can use.
+Let's walk through building a real, usable classroom tool from scratch. The example here is a student name spinner, something every teacher can use.
+]
+### Step 1:  Sign up for Claude and prepare an artifact
 
-### Step 1: Write Your Initial Prompt
+You can use any AI tool you want, but I find Claude is the most reliable coder. If you have a subscription to Chat-GPT, you have access to their coding tool, and if you have access to Google Drive AI tier, you have access to Google Gemini.  All of these tools can also generate code for free, but you are limited to your browser.
+
+In Claude, you can start to create an applicaiton by using their artifact prompts.
+In Gemini, you can create applications by using their gems.
+I haven't used Chat-GPT coding tools, but they call these apps.
+
+All of these can also just be built directly in a chat window.
+
+![Screenshot of Claude.ai atifact interface](/assets/vibe_coding_claude_interface.jpg)
+### Step 2: Write Your Initial Prompt
 
 The most important skill in vibe coding is writing a clear, specific initial prompt. Think of yourself as a project manager briefing a contractor. You need to describe the end result, not the technical steps.
 
@@ -69,7 +81,7 @@ Notice what makes this prompt effective:
 This kind of prompt sets a clear goal for a *MVP* (minimal viable product).
 The AI will return a block of HTML code. Copy it, save it as a `.html` file, and open it in your browser. That is your first app.
 
-### Step 2: Iterate One Feature at a Time
+### Step 3: Iterate One Feature at a Time - I want
 
 Vibe coding works best when you build incrementally. Do not try to describe every feature in your first prompt. Get something working, then add to it.
 
@@ -88,6 +100,10 @@ After your spinner is running, you can add features one at a time with short fol
 
 Each of these is a small, targeted request. The AI has the previous code in its context, so it knows what it is adding to.
 
+### step 4: Deploy your application
+
+Your application likely will work if you simply download the file, and click the file in your file browser.  It should just launch a browser tab of your application. However, for some features, you may find that this simple deployment method doesn't work, and you need to host a local server. This is trivial on a personal computer, and the AI chatbot can make a script to launch it for you if you ask.  On a work computer, you may not have access to the command line, so you may need to upload your file to a github account and then deploy using github pages.I will be covering this later in a future tutorial.
+
 ## Critical Warning: Student Data Privacy (FERPA)
 
 When you reach the step of loading real student names, you need to be careful.
@@ -103,11 +119,13 @@ When asking for this feature, you can simply say: *"Make sure the CSV is process
 
 ### Tip 1: Use CSV Files for Unique Data
 
-If your app needs a lot of specific content — flashcard questions, vocabulary words, song lyrics, image paths — do not hard-code it all into the app. Instead, ask the AI to build the app so it reads from a CSV file.
+If your app needs a lot of specific content such as flashcard questions, vocabulary words, song lyrics, image path, specific function calls or other information you want to be able to personally edit, do not hard-code it all into the app. Instead, ask the AI to build the app so it reads from a CSV file.
 
 For example, a rhythm flashcard application could have a CSV with columns for difficulty, topic, grade level, and answer behavior. Updating the content is then as simple as editing a spreadsheet. You can even use AI to help you generate or modify the CSV content — just remember the FERPA rule if student data is involved.
 
 **The less specific data you have hardcoded in your application, generally the better.**
+
+You can also SAVE to a CSV to record applicaiton data - including videos and audio and files!
 
 ### Tip 2: Use an AI Image Generator to Design Your Interface First
 
@@ -115,7 +133,7 @@ One of the most powerful vibe coding techniques is to use an AI image generator 
 
 The workflow looks like this:
 
-1. Use an AI image generator (nano-banana is great!) to generate a mock screenshot of what you want your app to look like
+1. Use an AI image generator (nano-banana is great!) to generate a mock screenshot of what you want your app to look like *"Build an interface for an applicaiton where the user is transcribing rhythms"* and provide your assetts for extra clarity.
 2. Provide that image to your coding AI (Claude, ChatGPT) along with a prompt like: *"Build this application based on the interface shown in this image"*
 
 This is especially effective when you have specific visual elements musical notation symbols, subject-specific icons, or a particular color scheme. By feeding the AI a visual reference, you skip a lot of back-and-forth on layout and styling.
