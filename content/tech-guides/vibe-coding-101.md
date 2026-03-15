@@ -9,7 +9,8 @@ tag_color: "#059669"
 
 I have been a music teacher for over a decade, and for most of that time I have been constrained by what commercial software happens to exist for music educators. If a tool did not exist, I simply did not have it. Although I could program, finding time to actually create the tools I need just wasn't there. That changed when I discovered vibe coding.  This is the practice of using AI to build custom applications by describing what you want in plain English. Since then, I have built over 25 classroom tools, including a student name spinner, rhythm flashcard apps, and even this very website.
 
-This guide will walk you through exactly how to get started, from your very first prompt to building a fully functional, customized classroom tool.
+
+This guide will walk you through exactly how to get started, from your very first prompt to building a fully functional, customized classroom tool. You do not need coding experience, although it is always helpful.
 
 ## Why This Matters for Teachers
 
@@ -44,7 +45,6 @@ Before you start building, it helps to know a few terms:
 
 **Usage** — How much of your token allowance you have consumed. Keep an eye on this if you are on a free plan.
 
-![Key AI terminology: Model, Context, Usage, and Tokens defined in an infographic](/assets/vibe_coding_key_terminology.jpg)
 
 ## Your First Build: A Student Name Spinner
 
@@ -54,11 +54,11 @@ Let's walk through building a real, usable classroom tool from scratch. The exam
 
 The most important skill in vibe coding is writing a clear, specific initial prompt. Think of yourself as a project manager briefing a contractor. You need to describe the end result, not the technical steps.
 
-Here is an example of a strong first prompt:
+Here is an example of a sample first prompt:
 
-> *"Please build a spinner for my Promethean board that uses touch controls as an HTML webapp. It will load a list of 24 names (placeholder) and will spin quickly with a fun animation. When the spin is complete, whatever name the arrow is pointing at will be largely displayed. When a name has been selected once, it will not be allowed to be selected again until the application is reloaded or reset."*
+> *"Please build a spinner for my Promethean board that uses touch controls as an HTML webapp. It will load a list of 24 names (placeholders for now) and will spin quickly with a fun animation. When the spin is complete, whatever name the arrow is pointing at will be largely displayed. When a name has been selected once, it will not be allowed to be selected again until the application is reloaded or reset."*
 
-![The full spinner prompt displayed in a styled box, highlighting key requirements](/assets/vibe_coding_first_prompt.jpg)
+
 
 Notice what makes this prompt effective:
 - It specifies the **platform** (Promethean board, touch controls)
@@ -66,6 +66,7 @@ Notice what makes this prompt effective:
 - It describes the **core behavior** in plain language
 - It includes edge cases (no repeating names until reset)
 
+This kind of prompt sets a clear goal for a *MVP* (minimal viable product).
 The AI will return a block of HTML code. Copy it, save it as a `.html` file, and open it in your browser. That is your first app.
 
 ### Step 2: Iterate One Feature at a Time
@@ -97,7 +98,6 @@ The correct approach is to ask the AI to build **CSV file support that processes
 
 When asking for this feature, you can simply say: *"Make sure the CSV is processed locally and the data never leaves the browser."*
 
-![FERPA warning: uploading student names is a violation, CSV processed locally is compliant](/assets/vibe_coding_ferpa_warning.jpg)
 
 ## Workflow Tips
 
@@ -132,7 +132,6 @@ We can borrow the idea of planning out an application before using it, but inste
 
 For very simple, well-defined applications, a detailed single prompt can work well. As you gain experience, you will develop a feel for when to one-shot and when to iterate.
 
-![One-shotting as a trap versus using PRD.md structure as the technique](/assets/vibe_coding_one_shotting.jpg)
 
 ### Tip 4: Use a PRD.md File to Keep the AI on Track
 
@@ -158,8 +157,6 @@ You do not need to learn to code to vibe code, but a few supporting skills will 
 ## Going Further: Advanced Techniques
 
 Once you are comfortable with the basics, there are more powerful approaches worth exploring:
-
-![CLI tools, AI-powered IDEs, and Model Context Protocol explained side by side](/assets/vibe_coding_advanced_techniques.jpg)
 
 **CLI tools and AI-powered IDEs** — Tools like [Claude Code](https://code.claude.com/docs/en/overview) (which is what powers this website) or [Cursor](https://cursor.com) allow the AI to directly read, write, and edit files on your computer. This is significantly more powerful than copy-pasting code in a chat window and is how larger projects are built.
 
