@@ -1,37 +1,12 @@
 {{ define "main" }}
 <main class="container">
     <section class="feed">
-        <h2>Latest Posts</h2>
+        <div class="section-head">
+            <h2>Latest posts</h2>
+        </div>
         <div class="posts-grid">
             {{ range .Site.RegularPages }}
-            <article class="post-card">
-                {{ if .Params.image }}
-                <a href="{{ .Permalink }}">
-                    <img src="{{ .Params.image }}" alt="{{ .Title }}" class="post-image">
-                </a>
-                {{ end }}
-                <div class="post-content">
-                    <div class="post-header">
-                        {{ if .Params.tag }}
-                        {{- $tagColor := .Params.tag_color | default "#000000" -}}
-                        {{- if not (findRE "^#[0-9a-fA-F]{6}$" $tagColor) -}}
-                            {{- $tagColor = "#000000" -}}
-                        {{- end -}}
-                        <span class="post-category" style="background-color: {{ $tagColor }}1a; color: {{ $tagColor }};">{{ .Params.tag }}</span>
-                        {{ else }}
-                        <span class="post-category {{ if eq .Params.type "tech" }}category-tech{{ else }}category-thought{{ end }}">
-                            {{ if eq .Params.type "tech" }}Tech Guide{{ else }}Educational Thought{{ end }}
-                        </span>
-                        {{ end }}
-                        <h3 class="post-title">
-                            <a href="{{ .Permalink }}">{{ .Title }}</a>
-                        </h3>
-                        <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
-                    </div>
-                    <p class="post-excerpt">{{ .Params.description }}</p>
-                    <a href="{{ .Permalink }}" class="read-more">Read More</a>
-                </div>
-            </article>
+            {{ partial "post-card.html" . }}
             {{ end }}
         </div>
     </section>

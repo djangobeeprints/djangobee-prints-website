@@ -1,0 +1,14 @@
+{{- /* Category chip. Uses front matter `tag` + `tag_color`, else falls back on `type`. */ -}}
+{{- $tag := .Params.tag -}}
+{{- $color := .Params.tag_color | default "" -}}
+{{- if not $tag -}}
+  {{- if eq .Params.type "tech" -}}
+    {{- $tag = "Tech Guide" -}}{{- $color = "#059669" -}}
+  {{- else if eq .Params.type "thought" -}}
+    {{- $tag = "Educational Thought" -}}{{- $color = "#dc2626" -}}
+  {{- end -}}
+{{- end -}}
+{{- if not (findRE "^#[0-9a-fA-F]{6}$" $color) -}}{{- $color = "#b45309" -}}{{- end -}}
+{{- with $tag -}}
+<span class="chip" style="--chip: {{ $color | safeCSS }}">{{ . }}</span>
+{{- end -}}

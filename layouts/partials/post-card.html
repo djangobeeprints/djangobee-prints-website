@@ -1,0 +1,25 @@
+{{- /* Post card. Image: front matter `image`, else the first image in the post. */ -}}
+{{- $img := .Params.image -}}
+{{- if not $img -}}
+  {{- with findRESubmatch `<img src="([^"]+)"` .Content 1 -}}
+    {{- $img = index (index . 0) 1 -}}
+  {{- end -}}
+{{- end -}}
+<article class="card">
+    <div class="card-media">
+        {{- with $img }}
+        <img src="{{ . }}" alt="" loading="lazy">
+        {{- else }}
+        <span class="card-media-empty"></span>
+        {{- end }}
+    </div>
+    <div class="card-body">
+        {{ partial "chip.html" . }}
+        <h3 class="card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p class="card-excerpt">{{ .Params.description }}</p>
+        <div class="card-meta">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+            <span class="card-cta" aria-hidden="true">Read →</span>
+        </div>
+    </div>
+</article>

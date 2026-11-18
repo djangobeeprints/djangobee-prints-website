@@ -1,7 +1,20 @@
 <footer class="footer">
-    <div class="footer-content">
-        <p>&copy; {{ now.Year }} {{ .Site.Title }}. All rights reserved.</p>
-        <p>Empowering elementary educators with technology</p>
-        <p><a href="https://ko-fi.com/djangobeeprints" target="_blank" rel="noopener noreferrer">Support my work on Ko-fi</a></p>
+    <div class="footer-inner">
+        <div>
+            <a href="/" class="footer-brand">{{ partial "logo.html" . }}<span>{{ .Site.Title }}</span></a>
+            <p class="footer-tagline">Empowering elementary educators with technology.</p>
+        </div>
+        <ul class="footer-links">
+            {{- range .Site.Menus.main }}
+            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+            {{- end }}
+        </ul>
+        <div class="footer-support">
+            <a class="btn btn-honey" href="https://ko-fi.com/djangobeeprints" target="_blank" rel="noopener noreferrer">Support my work on Ko-fi</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>&copy; {{ now.Year }} {{ .Site.Title }}. All rights reserved.</span>
+        <a href="mailto:djangobeeprints@gmail.com">djangobeeprints@gmail.com</a>
     </div>
 </footer>

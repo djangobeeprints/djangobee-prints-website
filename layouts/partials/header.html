@@ -1,9 +1,9 @@
 <nav class="navbar">
     <div class="nav-container">
         <div class="nav-brand">
-            <a href="/">{{ .Site.Title }}</a>
+            <a href="/">{{ partial "logo.html" . }}<span>{{ .Site.Title }}</span></a>
         </div>
-        <button class="nav-toggle" aria-label="Toggle navigation">
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
@@ -18,9 +18,19 @@
 
 {{ if .IsHome }}
 <header class="hero">
-    <div class="hero-content">
-        <h1>{{ .Site.Title }}</h1>
-        <p class="tagline">{{ .Site.Params.description }}</p>
+    <div class="hero-inner">
+        <div class="hero-copy">
+            <p class="eyebrow">{{ .Site.Title }}</p>
+            <h1>Helping teachers <em>become makers</em>.</h1>
+            <p class="tagline">Guides, free 3D models, and honest takes on {{ lower .Site.Params.description }}.</p>
+            <div class="hero-actions">
+                <a href="/tech-guides/" class="btn btn-dark">Read the guides</a>
+                <a href="/resources/" class="btn btn-ghost">Free 3D models</a>
+            </div>
+        </div>
+    </div>
+    <div class="hero-art">
+        <img src="/assets/hero.jpg" alt="" fetchpriority="high">
     </div>
 </header>
 {{ end }}
@@ -33,7 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (navToggle) {
         navToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
+            const open = navMenu.classList.toggle('active');
+            navToggle.setAttribute('aria-expanded', open);
         });
     }
 });
