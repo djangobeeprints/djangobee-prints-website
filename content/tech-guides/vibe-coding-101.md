@@ -9,7 +9,7 @@ tag_color: "#059669"
 
 I have been a music teacher for over a decade, and for most of that time I have been constrained by what commercial software happens to exist for music educators. If a tool did not exist, I simply did not have it. Although I could program, finding time to actually create the tools I need just wasn't there. That changed when I discovered vibe coding.  This is the practice of using AI to build custom applications by describing what you want in plain English. Since then, I have built over 25 classroom tools, including a student name spinner, rhythm flashcard apps, and even this very website.
 
-This guide was adapted from a presentation I prepared for my colleagues in which I had a hands on tutorial using Claude. A video explaining the process will be coming soon.
+This guide was adapted from a presentation I prepared for my colleagues in which I had a hands-on tutorial using Claude. A video explaining the process will be coming soon.
 
 This guide will walk you through exactly how to get started, from your very first prompt to building a fully functional, customized classroom tool. You do not need coding experience, although it is always helpful.  This is only the very tip of the iceberg.
 
@@ -28,7 +28,7 @@ The barrier to entry is lower than you might expect:
 - **An AI assistant** — [ChatGPT](https://chat.openai.com), [Claude](https://claude.ai), or [Google Gemini](https://gemini.google.com) all work. The free versions are sufficient to experiment with and build numerous applications.
 - **A text editor or web browser** — Most vibe-coded projects are HTML web apps that run directly in any browser, including the browser built into your Promethean board.
 - **No programming experience required**, though it is helpful!
-- **Advanced hardware not required** most AI computing is done in cloud servers. You can run things locally, at a cost.
+- **Advanced hardware not required** — most AI computing is done in cloud servers. You can run things locally, at a cost.
 
 If you already have a subscription to any AI service, you already have everything you need.
 
@@ -50,18 +50,18 @@ Before you start building, it helps to know a few terms:
 ## Your First Build: A Student Name Spinner
 
 Let's walk through building a real, usable classroom tool from scratch. The example here is a student name spinner, something every teacher can use.
-]
+
 ### Step 1:  Sign up for Claude and prepare an artifact
 
 You can use any AI tool you want, but I find Claude is the most reliable coder. If you have a subscription to Chat-GPT, you have access to their coding tool, and if you have access to Google Drive AI tier, you have access to Google Gemini.  All of these tools can also generate code for free, but you are limited to your browser.
 
-In Claude, you can start to create an applicaiton by using their artifact prompts.
+In Claude, you can start to create an application by using their artifact prompts.
 In Gemini, you can create applications by using their gems.
 I haven't used Chat-GPT coding tools, but they call these apps.
 
 All of these can also just be built directly in a chat window.
 
-![Screenshot of Claude.ai atifact interface](/assets/vibe_coding_claude_interface.jpg)
+![Screenshot of Claude.ai artifact interface](/assets/vibe_coding_claude_interface.jpg)
 ### Step 2: Write Your Initial Prompt
 
 The most important skill in vibe coding is writing a clear, specific initial prompt. Think of yourself as a project manager briefing a contractor. You need to describe the end result, not the technical steps.
@@ -78,10 +78,10 @@ Notice what makes this prompt effective:
 - It describes the **core behavior** in plain language
 - It includes edge cases (no repeating names until reset)
 
-This kind of prompt sets a clear goal for a *MVP* (minimal viable product).
+This kind of prompt sets a clear goal for a *MVP* (minimum viable product).
 The AI will return a block of HTML code. Copy it, save it as a `.html` file, and open it in your browser. That is your first app.
 
-### Step 3: Iterate One Feature at a Time - I want
+### Step 3: Iterate One Feature at a Time
 
 Vibe coding works best when you build incrementally. Do not try to describe every feature in your first prompt. Get something working, then add to it.
 
@@ -100,9 +100,9 @@ After your spinner is running, you can add features one at a time with short fol
 
 Each of these is a small, targeted request. The AI has the previous code in its context, so it knows what it is adding to.
 
-### step 4: Deploy your application
+### Step 4: Deploy your application
 
-Your application likely will work if you simply download the file, and click the file in your file browser.  It should just launch a browser tab of your application. However, for some features, you may find that this simple deployment method doesn't work, and you need to host a local server. This is trivial on a personal computer, and the AI chatbot can make a script to launch it for you if you ask.  On a work computer, you may not have access to the command line, so you may need to upload your file to a github account and then deploy using github pages.I will be covering this later in a future tutorial.
+Your application likely will work if you simply download the file, and click the file in your file browser.  It should just launch a browser tab of your application. However, for some features, you may find that this simple deployment method doesn't work, and you need to host a local server. This is trivial on a personal computer, and the AI chatbot can make a script to launch it for you if you ask.  On a work computer, you may not have access to the command line, so you may need to upload your file to a github account and then deploy using github pages. I will be covering this later in a future tutorial.
 
 ## Critical Warning: Student Data Privacy (FERPA)
 
@@ -125,7 +125,7 @@ For example, a rhythm flashcard application could have a CSV with columns for di
 
 **The less specific data you have hardcoded in your application, generally the better.**
 
-You can also SAVE to a CSV to record applicaiton data - including videos and audio and files!
+You can also SAVE to a CSV to record application data - including videos and audio and files!
 
 ### Tip 2: Use an AI Image Generator to Design Your Interface First
 
@@ -133,10 +133,10 @@ One of the most powerful vibe coding techniques is to use an AI image generator 
 
 The workflow looks like this:
 
-1. Use an AI image generator (nano-banana is great!) to generate a mock screenshot of what you want your app to look like *"Build an interface for an applicaiton where the user is transcribing rhythms"* and provide your assetts for extra clarity.
+1. Use an AI image generator (nano-banana is great!) to generate a mock screenshot of what you want your app to look like *"Build an interface for an application where the user is transcribing rhythms"* and provide your assets for extra clarity.
 2. Provide that image to your coding AI (Claude, ChatGPT) along with a prompt like: *"Build this application based on the interface shown in this image"*
 
-This is especially effective when you have specific visual elements musical notation symbols, subject-specific icons, or a particular color scheme. By feeding the AI a visual reference, you skip a lot of back-and-forth on layout and styling.
+This is especially effective when you have specific visual elements like musical notation symbols, subject-specific icons, or a particular color scheme. By feeding the AI a visual reference, you skip a lot of back-and-forth on layout and styling.
 
 As a vibe coder, you are acting as a **project manager**, coordinating different AI tools to produce a final product.
 
@@ -144,7 +144,7 @@ As a vibe coder, you are acting as a **project manager**, coordinating different
 
 ### Tip 3: Avoid One-Shotting at first
 
-One-shotting is when you try to put every single requirement into a single prompt and get the AI to build the entire application at once. This is accomplished by first completely planning out the application, and then having your AI follow the insructions loaded in the context.
+One-shotting is when you try to put every single requirement into a single prompt and get the AI to build the entire application at once. This is accomplished by first completely planning out the application, and then having your AI follow the instructions loaded in the context.
 
 We can borrow the idea of planning out an application before using it, but instead, build incrementally.
 

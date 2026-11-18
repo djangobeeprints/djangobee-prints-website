@@ -8,9 +8,9 @@ tag: "Tech Guide"
 tag_color: "#059669"
 ---
 
-I have a recurring problem in my music classroom: I need student-accessible storage for instrumens, especially my boomwhackers. There are commercial products for this, but I don't have money to waste when I can use my 3D printer to stretch my budget instead. Plus, I wanted to create a custom solution using an old metal cabinet I already have in the room.
+I have a recurring problem in my music classroom: I need student-accessible storage for instruments, especially my boomwhackers. There are commercial products for this, but I don't have money to waste when I can use my 3D printer to stretch my budget instead. Plus, I wanted to create a custom solution using an old metal cabinet I already have in the room.
 
-My design incorperates embedding magnets directly into the 3D printed mount. Here's how I designed and printed magnetic boomwhacker holders using negative spaces and print pauses.
+My design incorporates embedding magnets directly into the 3D printed mount. Here's how I designed and printed magnetic boomwhacker holders using negative spaces and print pauses.
 
 **Bonus:** With a little tape on the inside of each mount, these holders can secure the boomwhackers firmly enough to turn them into mounted xylophones.
 
@@ -136,7 +136,7 @@ Send the print to your printer and wait for the pause.
 When the printer pauses:
 
 1. Carefully insert your magnets into each negative space
-2. **CRITICAL: Make sure all magnets have the same polarity** - test with another magnet before inserting to ensure they all attract on the same side.  Although functionally it will work, I always make sure insert my magnets the same way, in case if I have an idea later to attach something to that magnet. Most of my prints on this website rely on having the correct polarity.
+2. **CRITICAL: Make sure all magnets have the same polarity** - test with another magnet before inserting to ensure they all attract on the same side.  Although functionally it will work, I always make sure to insert my magnets the same way, in case I have an idea later to attach something to that magnet. Most of my prints on this website rely on having the correct polarity.
 4. Resume the print
 
 ![Inserting Magnets](/assets/boomwhacker_mount_13.png)

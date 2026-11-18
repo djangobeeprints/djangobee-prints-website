@@ -2,7 +2,7 @@
 title: "About Me"
 date: 2025-01-01
 type: "page"
-_build:
+build:
   list: never
   render: always
 ---
@@ -11,7 +11,7 @@ _build:
 
 I'm a passionate music educator with 14 years of experience teaching elementary and middle school students in New Jersey public schools. I also teach extracurricular STEM and Maker courses.  My mother was a classically trained musician and a programmer, and she always told me that programming and music were linked. It took me many years to understand, but the magic of this connection is not an accident. Both are essentially about learning to sequence free parameters in orderly ways.
 
-Three years ago, I learned to 3D print. Our school had purchased printers back in 2017, and they sat completely unused until 2022.  By then, they were already obsolete!  Although I only had some CAD experience from high school, It only took 30 minutes of training to get me hooked. What started as personal curiosity quickly became something more when teachers kept asking me, "How can I do this too?" That's why I created Djangobee Prints.
+Three years ago, I learned to 3D print. Our school had purchased printers back in 2017, and they sat completely unused until 2022.  By then, they were already obsolete!  Although I only had some CAD experience from high school, it only took 30 minutes of training to get me hooked. What started as personal curiosity quickly became something more when teachers kept asking me, "How can I do this too?" That's why I created Djangobee Prints.
 
 ## My Mission
 

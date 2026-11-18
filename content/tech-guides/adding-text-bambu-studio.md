@@ -1,3 +1,9 @@
+---
+title: "3D Printing Text on Objects in Bambu Studio: A Guide for Educators"
+type: "tech"
+draft: true
+---
+
 # 3D Printing Text on Objects in Bambu Studio: A Guide for Educators
 
 ## Introduction

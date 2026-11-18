@@ -33,9 +33,9 @@ An adjustable bracket system with magnetic arms that allows you to label xylopho
 You will need:
 - Metal adhesive tape
 - Small neodymium magnets (for the arms and clipboard)
-- Labels (can be printed
+- Labels (can be printed)
 
 ## Tips
-Check the polarity of your magnet you inserting them.  Make sure that whichever way you choose for your first print, that all subsequent prints insert magnets in the same magnetic orientation.
+Check the polarity of your magnets when you insert them.  Make sure that whichever way you choose for your first print, that all subsequent prints insert magnets in the same magnetic orientation.
 
-The magnets in the arms are oriented vertically (you insert them and push them down).  However, this step has failed on printers using a hardened steel nozzle.  When inserting magnets, the  build surface is usually why the magnets won't leave the print.  However, with the orientation in combination with the addition of the hardened steel nozzle, I have observed print failures directly after inserting the magnet pauses.  use the standard stainless steel nozzle included with your printer to avoid this problem.  This problem occured on my A1 mini.
+The magnets in the arms are oriented vertically (you insert them and push them down).  However, this step has failed on printers using a hardened steel nozzle.  When inserting magnets, the  build surface is usually why the magnets won't leave the print.  However, with the orientation in combination with the addition of the hardened steel nozzle, I have observed print failures directly after inserting the magnet pauses.  Use the standard stainless steel nozzle included with your printer to avoid this problem.  This problem occurred on my A1 mini.

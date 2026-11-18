@@ -17,11 +17,11 @@ The question isn't whether to use technology. The question is *how* and *when* a
 
 ## The Critical Distinction: Teacher-Facing vs Student-Facing Technology
 
-There are different kinds of technologies we use as educators. I'm not worried about a presentation board. I'm not worried about a teacher using a projector to show the whole class something, or even as a companion to a presentation.  Regardless of it's efficacy, many teachers simply give theiir lessons from a slide deck. That's teacher-facing technology, and it can be incredibly powerful.
+There are different kinds of technologies we use as educators. I'm not worried about a presentation board. I'm not worried about a teacher using a projector to show the whole class something, or even as a companion to a presentation.  Regardless of its efficacy, many teachers simply give their lessons from a slide deck. That's teacher-facing technology, and it can be incredibly powerful.
 
 What concerns me is student-facing technology in K-2 - individual students sitting at Chromebooks doing self-directed work, adaptive AI math programs for first graders, screen-based activities that replace physical learning materials.
 
-Many elemntary schools in my area have chromebooks 1-1 and use them extensively. First and second graders spending significant time on individual devices, often doing work that could be accomplished with flashcards, manipulatives, or direct instruction.
+Many elementary schools in my area have chromebooks 1-1 and use them extensively. First and second graders spending significant time on individual devices, often doing work that could be accomplished with flashcards, manipulatives, or direct instruction.
 
 And here's the thing - while adaptive AI might provide teachers with strong assessment data collection tools, I believe there are other tools we can utilize to collect this data in ways that use fewer screens. I'm actually creating a presentation tool similar to SMART Notebook that allows me to quickly collect data from a whole group, reducing how often students need to do self-directed work on Chromebooks in K-2.
 
@@ -29,7 +29,7 @@ And here's the thing - while adaptive AI might provide teachers with strong asse
 
 We often tout this idea of Problem-Based Learning as the pinnacle of education. But when you boil it down, PBL requires foundational skills. You can't teach a concept with a new technology tool without falling back to rote instruction if basic skills with the technology aren't there.
 
-Imagine trying to have students design a solution to a problem using CAD software when none or very few of them have ever used CAD software. What happens? Is everyone going to learn CAD software? Or will you as a teacher just choose problems that have solutions already in your students skillsets?
+Imagine trying to have students design a solution to a problem using CAD software when none or very few of them have ever used CAD software. What happens? Is everyone going to learn CAD software? Or will you as a teacher just choose problems that have solutions already in your students' skillsets?
 
 This is why a lot of PBL ends up being activism with posters, slogans and community clean up - because everyone can use markers and pick up trash.
 
@@ -41,7 +41,7 @@ Computer training of students often feels like an afterthought. There is little 
 
 And this contributes to a digital divide that's getting worse, not better. Ever since 2020, I think it's hard to deny the fact that nearly every one of our students has access to the internet at this point.  The divide is in how one uses it, not in how they gain access. 
 
-If a person doesn't know how to use a computer effectively, how to navigate file systems, how to understand what's happening behind the touch screen - how will they ever learn to code (there is of course a hot argument as to if you even need to be able to code anymore, but even if the profession of coder is going away, coding is a valuable skil)? How will they take maximum advantage of the tools available to them?
+If a person doesn't know how to use a computer effectively, how to navigate file systems, how to understand what's happening behind the touch screen - how will they ever learn to code (there is of course a hot argument as to if you even need to be able to code anymore, but even if the profession of coder is going away, coding is a valuable skill)? How will they take maximum advantage of the tools available to them?
 
 The ease of use that touch devices provide is actually hiding the mechanical understanding that unlocks real power. We've made technology so simple to consume that we're preventing people from learning to create with it.
 
@@ -80,7 +80,7 @@ This is the kind of technology integration I want to see more of: Tools that emp
 If I could talk to a room full of K-4 teachers right now about technology in their classrooms, here's what I'd want them to hear:
 
 ### Stop This:
-Using student-facing technology for Problem-Based Learning without explicit instruction in the tools first. The digital divide makes this worse - you're essentially asking students to learn content AND learn the tool simultaneously, and the students who don't have computers at home will fall further behind. And that's not even including the problems with AI and assisstants at home.
+Using student-facing technology for Problem-Based Learning without explicit instruction in the tools first. The digital divide makes this worse - you're essentially asking students to learn content AND learn the tool simultaneously, and the students who don't have computers at home will fall further behind. And that's not even including the problems with AI and assistants at home.
 
 
 
@@ -98,6 +98,7 @@ But I am certain of this: We need to be more thoughtful about when, how, and why
 
 The goal isn't to reject technology. The goal is to use it wisely, to teach it systematically, and to ensure we're using technology productively rather than simply keeping them busy.
 
-Because if families are working hard to limit screen time, and then we just hand their kids a Chromebook for an hour of self-directed "learning," we're not helping. At the same time, we live in a modern world, where access to computers is vital to success and required in the modern workforce. 
+Because if families are working hard to limit screen time, and then we just hand their kids a Chromebook for an hour of self-directed "learning," we're not helping. At the same time, we live in a modern world, where access to computers is vital to success and required in the modern workforce.
+
 ---
 

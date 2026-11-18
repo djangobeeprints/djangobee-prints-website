@@ -8,11 +8,11 @@ tag: "Educational Thought"
 tag_color: "#dc2626"
 ---
 
-I feel that the biggest challenge facing educators is how to best deal with marginal students. My marginal students - the ones who have attention issues or behavior issues or even just simple attitude issues - perfomed better when they have more support to access the learning. Not all supports are equal, but I noticed I was able to get more consistent results when they had access to "walls that teach."
+I feel that the biggest challenge facing educators is how to best deal with marginal students. My marginal students - the ones who have attention issues or behavior issues or even just simple attitude issues - performed better when they have more support to access the learning. Not all supports are equal, but I noticed I was able to get more consistent results when they had access to "walls that teach."
 
 Walls that teach refers to a concept of visual reference materials posted around the classroom. Number lines. Alphabet charts. Multiplication tables. The information students can glance at when they need a reminder or a hint.
 
-But here's the problem: I teach music. Students rotate through my room once a week. They don't have desks. In a regular classroom, teachers can tape important references right to a student's desk, giving them a personal wall that teaches. But in music class? We're constantly moving, and working in different configurations. Traditional "walls that teach" are either too cumbersome to put up and take down for each class, or they're not relevant to what that specific group needs at that specific moment. For example, if I teach my students solfege in 1st and 2nd grade and chance to note names by 3rd grade, I potentially risk confusing 1st or 2nd grade students by having a wall that teaches aimed for 3rd graders.
+But here's the problem: I teach music. Students rotate through my room once a week. They don't have desks. In a regular classroom, teachers can tape important references right to a student's desk, giving them a personal wall that teaches. But in music class? We're constantly moving, and working in different configurations. Traditional "walls that teach" are either too cumbersome to put up and take down for each class, or they're not relevant to what that specific group needs at that specific moment. For example, if I teach my students solfege in 1st and 2nd grade and change to note names by 3rd grade, I potentially risk confusing 1st or 2nd grade students by having a wall that teaches aimed for 3rd graders.
 
 
 ## The Xylophone Problem
@@ -23,7 +23,7 @@ The solution? An adjustable bracket system with magnetic arms that allows me to 
 
 ![Xylophone with magnetic solfege labels showing Do, Mi, So, La](/assets/xylophone_mount_1.jpg)
 
-But it turned out the process of making these xylophone labels presented a solution to solingd a much bigger problem than labeling my xylophones..
+But it turned out the process of making these xylophone labels presented a solution to solving a much bigger problem than labeling my xylophones.
 
 Before I discovered 3D printing, I was subject to the whims of my budget. There are rolling racks that let students play xylophones while standing and using a music stand - perfect for first and second graders learning to read music. But these carts are expensive and take up enormous amounts of space. My music room isn't tiny, but space comes at a premium because I do a lot of folk dancing.
 
@@ -39,7 +39,7 @@ My next tool was a clip that mounts to a recorder to label the notes B, A, and G
 
 But there's something deeper happening here. When I ask a marginal student in third grade "what letter note are we looking at," they might give a completely unrelated answer without this guide. But with the labels visible on their own instrument, they have an extra chance to recognize that the correct answer is probably a letter. The guide doesn't just show information, it helps students understand the *type* of answer they're looking for. It's reducing cognitive load and providing scaffolding, right where they need it.
 
-I print one of these clips for every student recorder. It's not a special accommodation - it's a universal tool that helps everyone. Eventually, when they fall off, students have internalized these three ntoes and proper hand position.
+I print one of these clips for every student recorder. It's not a special accommodation - it's a universal tool that helps everyone. Eventually, when they fall off, students have internalized these three notes and proper hand position.
 
 ## The Note Shower: Rethinking Whole-Class Response
 
@@ -59,7 +59,7 @@ A music classroom needs different solutions. We can use physical manipulatives t
 
 ## Was This UDL All Along?
 
-Although I was in the middle of a masters degree in educaiton at the moment, I didn't consider Universal Design for Learning when I first started creating these tools. I was just pursuing my passion for technology and design and applying it to my job. My driving principle was simple: **increase information given while reducing distraction.**
+Although I was in the middle of a master's degree in education at the moment, I didn't consider Universal Design for Learning when I first started creating these tools. I was just pursuing my passion for technology and design and applying it to my job. My driving principle was simple: **increase information given while reducing distraction.**
 
 But looking back, I was doing UDL without knowing it. I was creating:
 - Multiple means of representation (visual labels right on instruments)
@@ -88,7 +88,7 @@ When you design your own solutions, you can customize them for your specific stu
 
 ## The Practical Side
 
-I'm fortunate that my school purchased 3D printers, and I've been given high priority access to the large printer. I also own one at home. The filament costs can add up, but my school purchases this for me as long as I'm using it for school-related projects. 3D printing filament is relatively inexpensive for the quantity of products you can make
+I'm fortunate that my school purchased 3D printers, and I've been given high priority access to the large printer. I also own one at home. The filament costs can add up, but my school purchases this for me as long as I'm using it for school-related projects. 3D printing filament is relatively inexpensive for the quantity of products you can make.
 
 The biggest expense? Magnets. The truth is, I probably use too many magnets in my builds and it's something I'm planning on trying to improve in my models. That said, they're incredibly handy in unique ways - like those clipboards that attach to wire fences for outdoor learning.
 
@@ -102,7 +102,7 @@ When educators come to me and ask how to start with 3D printing, here's what I t
 
 **Learn Bambu Studio and Tinkercad.** These are accessible tools that don't require years of CAD experience. There are many other slicers and CAD programs worth looking into.
 
-**Explore parametric models** on sites like MakerLab. These are models where you can customize a 3D design by simply adjusting parameters like "height" or "number of arms" without needing to design from scratch. You can even design your own parametric models using AI now. I create labels for my students recorders using AI to generate a script for OpenSCAD and then manually typing their names into the script.
+**Explore parametric models** on sites like MakerLab. These are models where you can customize a 3D design by simply adjusting parameters like "height" or "number of arms" without needing to design from scratch. You can even design your own parametric models using AI now. I create labels for my students' recorders using AI to generate a script for OpenSCAD and then manually typing their names into the script.
 
 **Start small and practical.** 3D printing is a skill you learn through practice - but it doesn't take much practice before you can make great models.
 

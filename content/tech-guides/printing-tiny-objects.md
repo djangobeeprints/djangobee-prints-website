@@ -41,11 +41,11 @@ This is where printing tiny objects gets tricky. Your default print settings won
 
 3D printers are pretty accurate, but they're limited by resolution - essentially the "pixel size" of your print. This is primarily determined by **layer height**.
 
-For tiny parts that need to be extremely precise dimensionally accurate, I used the **0.08mm Extra Fine** profile. This setting automatically adjusts many things about how your printer handles filament flow to achieve very small layers. This effectively reduces the "pixel size" of your print.
+For tiny parts that need to be extremely dimensionally accurate, I used the **0.08mm Extra Fine** profile. This setting automatically adjusts many things about how your printer handles filament flow to achieve very small layers. This effectively reduces the "pixel size" of your print.
 
-For a rod that needs to fit through a specific hole on a toy to acheive a friction fit, that extra precision matters. The added bonus of small layer height are nearly invisible layer lines. For high quality pieces that you don't want clear layer lines with, you may want to consider smaller layer heights.
+For a rod that needs to fit through a specific hole on a toy to achieve a friction fit, that extra precision matters. The added bonus of small layer height are nearly invisible layer lines. For high quality pieces that you don't want clear layer lines with, you may want to consider smaller layer heights.
 
-.08mm thick layers is possible overkill for this job, it's possible .12mm would have been fine.  If you ever need to get to even smaller layers, you can get a .2 nozzle, which allows you to get down to .04.
+.08mm thick layers are possibly overkill for this job, it's possible .12mm would have been fine.  If you ever need to get to even smaller layers, you can get a .2 nozzle, which allows you to get down to .04.
 
 Smaller layers increase print time, and they do not increase strength.
 
