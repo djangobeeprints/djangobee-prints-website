@@ -239,7 +239,7 @@ img {
     position: relative;
     overflow: hidden;
     border-bottom: 1px solid var(--line);
-    background-color: #f8f3ea;   /* matches the illustration's background */
+    background-color: #f8ecd9;   /* close to the illustration's background */
 }
 
 .hero-inner {
@@ -308,11 +308,17 @@ img {
     inset: 0;
 }
 
+/* Picture is pinned right at full hero height; its left edge fades into
+   the background so no box edge shows */
 .hero-art img {
-    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
     height: 100%;
-    object-fit: cover;
-    object-position: 70% center;
+    width: auto;
+    max-width: none;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 45%);
+    mask-image: linear-gradient(to right, transparent 0%, #000 45%);
 }
 
 /* ==========================================================================
@@ -981,13 +987,11 @@ img {
     /* Stack the art under the text, cropped to the illustration */
     .hero-art {
         position: relative;
-        aspect-ratio: 16 / 10;
+        aspect-ratio: 4 / 3;
     }
 
-    .hero-art img {
-        object-position: 88% center;
-        transform: scale(1.5);
-        transform-origin: 82% 55%;
+    .hero-art {
+        overflow: hidden;
     }
 
     .footer-inner {
